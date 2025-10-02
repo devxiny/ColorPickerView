@@ -114,7 +114,9 @@ public class AlphaSlideBar extends AbstractSlider {
 
   @Override
   protected void onDraw(Canvas canvas) {
-    canvas.drawBitmap(backgroundBitmap, 0, 0, null);
+    if (backgroundBitmap != null) {
+      canvas.drawBitmap(backgroundBitmap, 0, 0, null);
+    }
     super.onDraw(canvas);
   }
 
