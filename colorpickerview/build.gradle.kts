@@ -38,6 +38,8 @@ mavenPublishing {
   }
 }
 
+signing {
+  isRequired = false
 }
 
 //baselineProfile {
