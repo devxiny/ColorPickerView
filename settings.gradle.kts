@@ -29,4 +29,4 @@ dependencyResolutionManagement {
 
 include(":app")
 include(":colorpickerview")
-include(":benchmark")
+//include(":benchmark")

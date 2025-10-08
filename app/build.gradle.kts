@@ -18,7 +18,7 @@ import com.skydoves.colorpicker.Configuration
 plugins {
   id(libs.plugins.android.application.get().pluginId)
   id(libs.plugins.kotlin.android.get().pluginId)
-  id(libs.plugins.baseline.profile.get().pluginId)
+//  id(libs.plugins.baseline.profile.get().pluginId)
 }
 
 android {
@@ -45,12 +45,12 @@ android {
     abortOnError = false
   }
   buildTypes {
-    create("benchmark") {
-      initWith(buildTypes.getByName("release"))
-      signingConfig = signingConfigs.getByName("debug")
-      matchingFallbacks += listOf("release")
-      isDebuggable = false
-    }
+//    create("benchmark") {
+//      initWith(buildTypes.getByName("release"))
+//      signingConfig = signingConfigs.getByName("debug")
+//      matchingFallbacks += listOf("release")
+//      isDebuggable = false
+//    }
   }
 }
 
@@ -61,5 +61,5 @@ dependencies {
   implementation(libs.timber)
   implementation(libs.powermenu)
 
-  baselineProfile(project(":benchmark"))
+//  baselineProfile(project(":benchmark"))
 }
