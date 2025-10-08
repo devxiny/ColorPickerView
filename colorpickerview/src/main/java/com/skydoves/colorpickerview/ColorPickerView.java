@@ -286,6 +286,10 @@ public class ColorPickerView extends FrameLayout implements LifecycleObserver {
     if (!this.isEnabled()) {
       return false;
     }
+
+    // 关键代码：完全禁止父视图拦截触摸事件
+    getParent().requestDisallowInterceptTouchEvent(true);
+
     switch (event.getActionMasked()) {
       case MotionEvent.ACTION_DOWN:
       case MotionEvent.ACTION_MOVE:
